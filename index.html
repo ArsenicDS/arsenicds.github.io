@@ -7,22 +7,179 @@
 
     <!-- i'm actually too lazy to build tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="pjs/fix.css">
+
+    <style type="text/tailwindcss">
+        a {
+            @apply text-[#cba6f7] hover:text-[#9e59f0] duration-500
+        }
+    </style>
 </head>
 
-<body>
-    <div class="flex h-screen w-screen bg-[#1e1e2e] text-[#cdd6f4] items-center justify-center">
-        <div class="flex flex-row p-6 bg-[#45475a] rounded-lg justify-center items-center">
-            <h1 class="text-[#cba6f7]">ArsenicDS</h1>
-            <p>Building one project at a time™</p>
+<body class="w-screen bg-[#1e1e2e] text-[#cdd6f4]">
+    <div id="pjs"></div>
+
+    <div class="content m-4 mt-6 mb-6">
+        <div class="flex items-center justify-center">
+            <div class="p-6 bg-[#45475a] rounded-lg text-center border-[#6c7086] border-2">
+                <h1 class="text-[#cba6f7] text-4xl font-semibold">ArsenicDS</h1>
+                <p>Building one project at a time™</p>
+            </div>
         </div>
 
-        <div>
-            <h1>Projects</h1>
+        <div class="p-6 bg-[#45475a] rounded-lg text-center mt-6 border-[#6c7086] border-2 mx-20">
+            <h1 class="text-3xl font-semibold">Projects</h1>
+
+            <div class="p-6 bg-[#585b70] rounded-lg text-center mt-6 border-[#7f849c] border-2">
+                <h1 class="text-2xl font-semibold">extinguish</h1>
+                <p>Simple spam bot that posts to Blaze Social</p> <br />
+
+                <a href="https://github.com/ArsenicDS/extinguish">
+                    GitHub
+                </a>
+            </div>
         </div>
 
-        <div>
-            <h1>Members</h1>
+        <div class="p-6 bg-[#45475a] rounded-lg text-center mt-6 border-[#6c7086] border-2 mx-20">
+            <h1 class="text-3xl font-semibold">Members</h1>
+
+            <div class="p-6 bg-[#585b70] rounded-lg text-center mt-6 border-[#7f849c] border-2">
+                <h1 class="text-2xl font-semibold">zirconium</h1>
+                <p>Founder, Admin, and Developer.</p> <br />
+
+                <a href="https://github.com/lolzthedev">GitHub</a>
+            </div>
+
+            <div class="p-6 bg-[#585b70] rounded-lg text-center mt-6 border-[#7f849c] border-2">
+                <h1 class="text-2xl font-semibold">vinvinthebinbin</h1>
+                <p>Staff, and Moderator</p> <br />
+
+                <a href="https://github.com/vinvinthebinbin">GitHub</a>
+            </div>
         </div>
     </div>
+
+    <script src="pjs/particlejs.min.js"></script>
+    <script>
+        particlesJS('pjs',
+  {
+    "particles": {
+      "number": {
+        "value": 100,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+    </script>
 </body>
 </html>
